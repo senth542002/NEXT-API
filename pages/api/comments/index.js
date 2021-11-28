@@ -1,7 +1,8 @@
-import { comments } from "../../../data/comments";
 import { commentsData } from '../../../data/comments'
 
 export default function handler(req,res) {
+    
+    console.log(commentsData)
 
     if(req.method === 'GET') {
         res.status(200).json(commentsData)
@@ -15,5 +16,4 @@ export default function handler(req,res) {
 
         res.status(201).json(newComment)
     }
-    console.log(commentsData)
 }
